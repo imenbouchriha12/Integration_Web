@@ -105,5 +105,11 @@
   gap: 51px;
 }
 
-
-
+.bggrad {
+  background: linear-gradient(
+    to right,
+    rgba(47, 182, 137, 0.863),
+    #949e868c, 
+    rgba(254, 79, 45, 0.42)   
+  );
+}
