@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Forum Replica</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0D9488", // A teal color from the image
+              "background-light": "#FDFBF6",
+              "background-dark": "#181A1B",
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#25282A",
+              "text-light": "#374151",
+              "text-dark": "#E0E0E0",
+              "text-muted-light": "#6B7280",
+              "text-muted-dark": "#9E9E9E",
+              "border-light": "#E5E7EB",
+              "border-dark": "#424242",
+            },
+            fontFamily: {
+              display: ["Poppins", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.75rem", // 12px
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-icons {
+        font-size: inherit;
+        vertical-align: middle;
+      }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="flex flex-col min-h-screen">
+<header class="bg-[#0b786e] sticky top-0 z-50">
+<nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+<div class="flex items-center space-x-8">
+<a class="flex items-center space-x-2" href="#">
+<div class="w-10 h-10 bg-white rounded-md flex items-center justify-center">
+<svg class="w-7 h-7 text-[#0b786e]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 6.253v11.494m-5.247-8.991l10.494 6.488M6.753 18.747l10.494-6.488" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<span class="text-white font-bold text-xl">Esprit2Peer</span>
+</a>
+<div class="hidden md:flex items-center space-x-6 text-white/80">
+<a class="hover:text-white transition" href="#">Home</a>
+<a class="hover:text-white transition" href="#">Planner</a>
+<a class="hover:text-white transition" href="#">Match Making</a>
+<a class="hover:text-white transition" href="#">Focus</a>
+<a class="text-white font-semibold border-b-2 border-white pb-1" href="#">Analytics</a>
+<a class="hover:text-white transition" href="#">Forum</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-white/80 hover:text-white transition"><span class="material-icons">notifications</span></button>
+<button class="text-white/80 hover:text-white transition"><span class="material-icons">settings</span></button>
+<img alt="User avatar" class="w-9 h-9 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4gAFWvixiALZWwkvMRva8-yIM8ETnG3IDkTK11D7qqoK_pW2hCUuL2zqpeiKq9AZs5Yw_Vfji0eApfoaHQsMxuIWPeOxgJj6yYW9uHTti4pTefYKgO_kKYQh1ojhL2OWzvXI4q-j4sAau0bUNNSToYgzgCOEJnakBaamBB8OyeJop7SWhgRO0q-Ye2xlc3oXa9dyEfS5bAmRuAn8qC4ztpusGsE3pKFBEC9k0qAtiv0VPaPZlyJr3gFt3nGoJSgSIdYWuNsHEcmI"/>
+</div>
+</nav>
+</header>
+<main class="flex-grow container mx-auto px-6 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-6">
+<div class="border border-primary rounded-lg p-6 bg-surface-light dark:bg-surface-dark">
+<h1 class="text-3xl font-bold text-text-light dark:text-text-dark">Forum</h1>
+<p class="text-text-muted-light dark:text-text-muted-dark mt-1">Ask questions, share knowledge, and help each other learn</p>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-lg shadow-sm p-6">
+<div class="flex items-start space-x-4">
+<img alt="Ahmed Ben Salem's avatar" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJEruj7wvrk6g9PLazo6aqSBdr572ik5uUG6i1ydgfq7qww3im8QfsCVO39qJ6Wlor6Oa8J5Zp4FuHk5cpuNjhPU8z2R8bg0vlYJ5GgaDShLDg0wuSil7lwLXJo_zH0VR75TEOUFemAIpFi4kmM0P7Jpn8oQCn3qRrC6fllXeePAhHU3tSfsIlhUN9hPrwtEUV-LgkDBeQmfDwQ7lQh7RQ8nKdu-UzCORbAoBtrjfAEviRXLwD6T5otyCj57dGpLnwpwf7CHSccZA"/>
+<div class="flex-1">
+<div class="flex items-center space-x-2 text-sm">
+<span class="font-semibold text-text-light dark:text-text-dark">Ahmed Ben Salem</span>
+<span class="text-text-muted-light dark:text-text-muted-dark">2 hours ago</span>
+<span class="bg-teal-100 dark:bg-teal-900 text-teal-600 dark:text-teal-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Computer Science</span>
+</div>
+<h2 class="text-xl font-bold mt-1 text-text-light dark:text-text-dark">How to implement binary search tree in Python?</h2>
+<p class="mt-2 text-text-muted-light dark:text-text-muted-dark">I'm struggling with implementing a BST from scratch. Can someone explain the insertion and deletion methods with examples?</p>
+<div class="mt-4 bg-gray-800 rounded-lg overflow-hidden">
+<img alt="Python code snippet for a binary search tree" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAih1fl7bvchTTzMcugvrOdh4r2QnBvaJ05CcdX_Zg-NDkj4ZLrmsgeZiS3MCjL3QikARbKHYNVHZDMCWUW9PSLFISzL86FkOUjpsJXAmBhXEuu1d5urNmkA6d5w1LOr_f1iqquh2uP_y469XN0tgcwlhVVnqONaq2FhFiiq05zwKlvqimy7szaLYm2tBeKn4d4hJgLR721LRqEUTb7Gzgm4bMYSH14cZasrNks5io_aZxE6oJLmQgJZp8eYxzFi0w6iaxNH2B_Wm4"/>
+</div>
+<div class="mt-4 flex justify-between items-center text-sm text-text-muted-light dark:text-text-muted-dark">
+<div class="flex items-center space-x-4">
+<button class="flex items-center space-x-1 hover:text-primary transition"><span class="material-icons text-base">arrow_upward</span><span>24</span></button>
+<span class="flex items-center space-x-1"><span class="material-icons text-base">chat_bubble_outline</span><span>8 answers</span></span>
+<button class="hover:text-primary transition"><span class="material-icons text-base">bookmark_border</span></button>
+</div>
+<div class="flex items-center space-x-2">
+<span class="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs font-medium px-3 py-1 rounded-full">Python</span>
+<span class="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs font-medium px-3 py-1 rounded-full">Data Structures</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-lg shadow-sm p-6">
+<div class="flex items-start space-x-4">
+<img alt="Fatma Karray's avatar" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEdLL-e0k_FyNTsmquZ7CDtV-uLyIuORqg0X1HkDyqrtwg9GstEPHmVeCFPh0Tx2bEa8CHcDYVJHReodGcIHo1mrtxz-8iXOP4Lkp5Fs42pnyTNuXdLbuxFoFMFT6lEhk4dekZiyHkOyP7tzXecKOKB7WPD5O8_nprcQyFxJKLZPM-VfXLe5VJpg6BJd_0cZCj1QmNnBdjjdYLQyq9XlJbJrJeTU9ETTpPJeMeBdSoWn_AUb2VCKkPH0C8cDtQiSsPfTpObleKJqk"/>
+<div class="flex-1">
+<div class="flex items-center space-x-2 text-sm">
+<span class="font-semibold text-text-light dark:text-text-dark">Fatma Karray</span>
+<span class="text-text-muted-light dark:text-text-muted-dark">4 hours ago</span>
+<span class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Mathematics</span>
+</div>
+<h2 class="text-xl font-bold mt-1 text-text-light dark:text-text-dark">Best resources for learning calculus?</h2>
+<p class="mt-2 text-text-muted-light dark:text-text-muted-dark">I'm looking for good online resources and books to master calculus. What worked best for you?</p>
+<div class="mt-4 flex justify-between items-center text-sm text-text-muted-light dark:text-text-muted-dark">
+<div class="flex items-center space-x-4">
+<button class="flex items-center space-x-1 hover:text-primary transition"><span class="material-icons text-base">arrow_upward</span><span>18</span></button>
+<span class="flex items-center space-x-1"><span class="material-icons text-base">chat_bubble_outline</span><span>12 answers</span></span>
+<button class="hover:text-primary transition"><span class="material-icons text-base">bookmark_border</span></button>
+</div>
+<div class="flex items-center space-x-2">
+<span class="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs font-medium px-3 py-1 rounded-full">Calculus</span>
+<span class="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs font-medium px-3 py-1 rounded-full">Study Tips</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-lg shadow-sm p-6">
+<div class="flex items-start space-x-4">
+<img alt="Mohamed Trabelsi's avatar" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0GVHkyXpbnzOzFigFSnilUaCcWRg19Owk79MDbCTQ8cwOh5Xy6iDSL7PX6bXNWeLpgkXcwEy8m5s2Ob6I956IyY9pQNV8ROxjqQt8-WnoOEnm_hPFoJGa2yAoJz9KtpqhFlVsEAxt5-6L1fAppl3nYajopcRE1RT_FcjO6zue9G6iqEk6u_sYvjzGUFvr6ILFIsJZ8aTk_TGOU_8X-acv4fI6xRCF160yXBKDQOSd6JZ-gyXlpKUn2THYMfgMnVEZVrYWt99ZNVY"/>
+<div class="flex-1">
+<div class="flex items-center space-x-2 text-sm">
+<span class="font-semibold text-text-light dark:text-text-dark">Mohamed Trabelsi</span>
+<span class="text-text-muted-light dark:text-text-muted-dark">8 hours ago</span>
+<span class="bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Engineering</span>
+</div>
+<h2 class="text-xl font-bold mt-1 text-text-light dark:text-text-dark">Circuit analysis help needed</h2>
+<p class="mt-2 text-text-muted-light dark:text-text-muted-dark">Can someone help me solve this circuit using Kirchhoff's laws? I'm getting confused with the current directions.</p>
+<div class="mt-4 bg-gray-50 dark:bg-gray-800/50 border border-border-light dark:border-border-dark rounded-lg overflow-hidden">
+<img alt="Circuit analysis code snippet" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqHm3XXJQFgzTMnKtSBFq4Ks9qKGufc0O2g9kkialeIvrAtfu3OtQZJknHzeVnR-nSqwPI9JeTOX9ia1Fa7qn23qab91K4eskPUVBvz9L4BqrvcqyVa0OyYyWX725HLPiM52aAa0nc3OiWOMuB85P21zMqT7tOkQ1koWEo9iUHyOGZlx7dK8VkhozuBB-tdd8LJQiw6YuWA2cnUSCMEvL95J6PJT2HlRxPxCym5458Ras9AuPJ7Eu8FTT9tNZwrp17n80FVKpiJzs"/>
+</div>
+<div class="mt-4 flex justify-between items-center text-sm text-text-muted-light dark:text-text-muted-dark">
+<div class="flex items-center space-x-4">
+<button class="flex items-center space-x-1 hover:text-primary transition"><span class="material-icons text-base">arrow_upward</span><span>15</span></button>
+<span class="flex items-center space-x-1"><span class="material-icons text-base">chat_bubble_outline</span><span>6 answers</span></span>
+<button class="hover:text-primary transition"><span class="material-icons text-base">bookmark_border</span></button>
+</div>
+<div class="flex items-center space-x-2">
+<span class="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs font-medium px-3 py-1 rounded-full">Circuits</span>
+<span class="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs font-medium px-3 py-1 rounded-full">Homework help</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="space-y-6">
+<div class="bg-surface-light dark:bg-surface-dark rounded-lg shadow-sm p-6">
+<h3 class="flex items-center font-bold text-lg"><span class="material-icons text-red-500 mr-2 text-xl">local_fire_department</span>Trending Topics</h3>
+<ul class="mt-4 space-y-4">
+<li class="flex justify-between items-center text-sm">
+<span class="text-text-light dark:text-text-dark">Machine Learning</span>
+<span class="text-text-muted-light dark:text-text-muted-dark">142 posts</span>
+</li>
+<li class="flex justify-between items-center text-sm">
+<span class="text-text-light dark:text-text-dark">React.js</span>
+<span class="text-text-muted-light dark:text-text-muted-dark">88 posts</span>
+</li>
+<li class="flex justify-between items-center text-sm">
+<span class="text-text-light dark:text-text-dark">Linear Algebra</span>
+<span class="text-text-muted-light dark:text-text-muted-dark">76 posts</span>
+</li>
+<li class="flex justify-between items-center text-sm">
+<span class="text-text-light dark:text-text-dark">Database Design</span>
+<span class="text-text-muted-light dark:text-text-muted-dark">64 posts</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-lg shadow-sm p-6">
+<h3 class="flex items-center font-bold text-lg"><span class="material-icons text-blue-500 mr-2 text-xl">person</span>Most Active Students</h3>
+<ul class="mt-4 space-y-4">
+<li class="flex justify-between items-center">
+<div class="flex items-center space-x-3">
+<img alt="Sarah Mansouri's avatar" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL_xF6ac1Yj4mrqm2Y4rt72Sx2ZcULFx0bSyvus_7Ss1bl7Ft3QOdnQ1icFPCPHhVSh8tcVRJn7XPIPCqyAzrxu3-nWx6i2vEPQA66GAEktL109-uiDpEuvZoR9hRkji-5BSFtHoJWP6KWTvsZfMtw7prnHT1tRPXpD9v_lvFNbDO0t-48V_28TYLr6BzhqZcW3BBOflZahANdKcjTtdGEbGhjzsdMiEQe_lrV7ob3TIwnyiOjkNL_GCcoOzeXzEj8_vIOysZyV5c"/>
+<div>
+<p class="font-semibold text-sm text-text-light dark:text-text-dark">Sarah Mansouri</p>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark">245 answers</p>
+</div>
+</div>
+<span class="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+</li>
+<li class="flex justify-between items-center">
+<div class="flex items-center space-x-3">
+<img alt="Yassine Bouli's avatar" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8VGrAe2EKBJPAMXZxhOHlKHOaoDYfiY_pKZZHzziZNM56UV9oeUmHoHXoXY0irOxJU7V39kXdccZGGPiw0P8wCEpRW_9o4JIOVLlH9WCA61_XBCha48WKhBNSHS8YiYX6wH7dvIChcs1SPoIurZo7xvnxPTxIRFIzSuaGeC5D1Q7A1sd02F-ijqQZC1-SnnbxA9w97jjUvR5rHO_RABJBpJomAVCtlTvTsz5GRX8yALArQoAnEJ0MDdbIGK7X-YHQKyIAN5Y8O3I"/>
+<div>
+<p class="font-semibold text-sm text-text-light dark:text-text-dark">Yassine Bouli</p>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark">198 answers</p>
+</div>
+</div>
+<span class="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+</li>
+<li class="flex justify-between items-center">
+<div class="flex items-center space-x-3">
+<img alt="Amira Zouari's avatar" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXJBqwhmJFXTjxcwGXwMzaoN-Jpb-yEZF2BqXukbkh2_4pdLc-0bAPbY3mzG6Sg_jJdlryRB1a0Na3Xu4dEJduJZ22MQtNSBhwSIXu7-4kHaZoDL9jq6Aonv88sjnt3WtBFnumUFC8kfH0TdupZNAzsFa9Jam8EpSdkSnCDbxlCRRN9S-pz21XpJ4CrKLINKjjwLT08RnqWjSMx36dYEpJZP0Ivqt6Rtj4zDLok8Nj8nMHbfVI1AfurgXlkaSTln0UqfvNw7rtNhg"/>
+<div>
+<p class="font-semibold text-sm text-text-light dark:text-text-dark">Amira Zouari</p>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark">167 answers</p>
+</div>
+</div>
+<span class="w-2.5 h-2.5 bg-yellow-500 rounded-full"></span>
+</li>
+</ul>
+</div>
+</aside>
+</div>
+</main>
+<footer class="bg-[#0b786e] text-white/80">
+<div class="container mx-auto px-6 py-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center space-x-2">
+<div class="w-10 h-10 bg-white rounded-md flex items-center justify-center">
+<svg class="w-7 h-7 text-[#0b786e]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 6.253v11.494m-5.247-8.991l10.494 6.488M6.753 18.747l10.494-6.488" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<span class="text-white font-bold text-xl">Esprit2Peer</span>
+</div>
+<p class="mt-4 text-sm">Connecting students worldwide to achieve academic excellence together.</p>
+</div>
+<div>
+<h4 class="font-bold text-white tracking-wide">Quick Links</h4>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="hover:text-white transition" href="#">Home</a></li>
+<li><a class="hover:text-white transition" href="#">About Us</a></li>
+<li><a class="hover:text-white transition" href="#">How It Works</a></li>
+<li><a class="hover:text-white transition" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-white tracking-wide">Resources</h4>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="hover:text-white transition" href="#">Help Center</a></li>
+<li><a class="hover:text-white transition" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-white transition" href="#">Terms of Service</a></li>
+<li><a class="hover:text-white transition" href="#">FAQs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-white tracking-wide">Get in Touch</h4>
+<ul class="mt-4 space-y-3 text-sm">
+<li class="flex items-center space-x-2">
+<span class="material-icons text-xl">email</span>
+<a class="hover:text-white transition" href="mailto:hello@esprit2peer.com">hello@esprit2peer.com</a>
+</li>
+</ul>
+<div class="flex space-x-4 mt-4">
+<a class="hover:text-white transition" href="#"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"></path></svg></a>
+<a class="hover:text-white transition" href="#"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a>
+<a class="hover:text-white transition" href="#"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.064c0 2.299 1.634 4.218 3.803 4.654-.7.194-1.446.265-2.219.237.614 1.882 2.396 3.256 4.505 3.301-1.625 1.277-3.675 2.038-5.9 2.038-.381 0-.756-.022-1.127-.065 2.109 1.355 4.609 2.145 7.29 2.145 8.76 0 13.555-7.247 13.555-13.555 0-.206-.005-.412-.014-.617.932-.673 1.743-1.512 2.384-2.474z"></path></svg></a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/20 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
+<p>© 2025 Esprit2Peer. All rights reserved.</p>
+<p class="mt-4 md:mt-0 flex items-center">Made with <span class="material-icons text-red-500 mx-1">favorite</span> for students</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

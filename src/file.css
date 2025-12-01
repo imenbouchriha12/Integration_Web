@@ -3,28 +3,27 @@
 :root {
   --color-primary: #fdfbee;
   --color-secondary: #57B4BA;
-    --color-textblue: #32B4AE;
+  --color-textblue: #32B4AE;
   --color-accent: #FE4F2D;
   --color-accent-30: rgb(254, 79, 45, 0.3);
-   --color-card:#F7F4E8;
+  --color-card: #F7F4E8;
   --color-darkgreen: #015551;
   --color-light: #FFFFFF;
   --footer-bg: #004A4A;
   --footer-bg-30: rgb(0, 74, 74, 0.3);
-
   --color-text: #000000;
   --color-background: rgb(255, 255, 255, 0.4);
   --color-button1-start: rgba(254, 79, 45, 0.56); /* #FE4F2D à 56% */
   --color-button1-end: rgba(255, 54, 14, 1);      /* #FF360E à 100% */
   --color-p-start: #32B4AE;
-   --color-p-end: #FE4F2D; 
-   --color-b-satart:#57B4BA;
-   --color-b-end:#10B981;
-   --color-backgroundSession: rgb(254, 79, 45, 0.61);
-     --color-backgroundSession1:rgb(0, 74, 74, 0.15);
-
-
-
+  --color-p-end: #FE4F2D; 
+  --color-b-satart: #57B4BA;
+  --color-b-end: #10B981;
+  --color-backgroundSession: rgb(254, 79, 45, 0.61);
+  --color-backgroundSession1: rgb(0, 74, 74, 0.15);
+  
+  /* NEW VARIABLE ADDED FOR MODAL STAR COLOR */
+  --color-star-active: #FBBF24; /* Yellow for active stars */
 }
 
 /* Tailwind base */
@@ -49,10 +48,9 @@
 .bg-accent-30 { background-color: var(--color-accent-30); }
 .bg-footer-30 { background-color: var(--footer-bg-30); }
 .bg-back-4 { background-color: var(--color-background); }
-.bg-bgCard{ background-color: var(--color-card); }
+.bg-bgCard { background-color: var(--color-card); }
 .bg-session { background-color: var(--color-backgroundSession); }
-.bg-session1 { background-color: var( --color-backgroundSession1); }
-
+.bg-session1 { background-color: var(--color-backgroundSession1); }
 
 .button {
   background: linear-gradient(
@@ -112,4 +110,90 @@
     #949e868c, 
     rgba(254, 79, 45, 0.42)   
   );
+}
+
+/* NEW: Star rating system using your existing variables */
+.star-rating-container {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.star-icon {
+  cursor: pointer;
+  color: #E5E7EB; /* Default gray color for inactive stars */
+  transition: color 0.2s ease;
+  font-size: 1.875rem; /* text-3xl */
+  line-height: 2.25rem;
+}
+
+
+
+.star-icon.active {
+  color: var(--color-star-active); /* Yellow for active stars */
+}
+
+.star-icon:hover {
+  color: var(--color-star-active);
+}
+
+/* Hover effect for star groups */
+.star-rating-container:hover .star-icon {
+  color: var(--color-star-active);
+}
+
+.star-rating-container .star-icon:hover ~ .star-icon {
+  color: #E5E7EB;
+}
+
+/* NEW: Modal specific styles using your variables */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 0.75rem; /* rounded-lg */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+}
+
+.modal-header {
+  border-bottom-color: #E5E7EB; /* border-light */
+}
+
+.dark .modal-header {
+  border-bottom-color: #374151; /* border-dark */
+}
+
+.modal-text-secondary {
+  color: #4B5563; /* text-light-secondary */
+}
+
+.dark .modal-text-secondary {
+  color: #D1D5DB; /* text-dark-secondary */
+}
+
+.modal-textarea {
+  border-color: #E5E7EB; /* border-light */
+  background-color: white;
+}
+
+.dark .modal-textarea {
+  border-color: #374151; /* border-dark */
+  background-color: #1F2937; /* background-dark */
+}
+
+.modal-close {
+  color: #4B5563; /* text-light-secondary */
+}
+
+.modal-close:hover {
+  color: #111827; /* text-light-primary */
+}
+
+.dark .modal-close {
+  color: #D1D5DB; /* text-dark-secondary */
+}
+
+.dark .modal-close:hover {
+  color: #F9FAFB; /* text-dark-primary */
 }
