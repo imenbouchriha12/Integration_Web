@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esprit2Peer - Events & Planner</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/a2d9d6bd64.js" crossorigin="anonymous"></script>
+
+    <!-- Your Styles -->
+    <link rel="stylesheet" href="file.css" />
+</head>
+
+<body class="bg-primary text-text font-sans">
+
+    <!-- HEADER -->
+    <header class="flex justify-between items-center px-6 md:px-8 py-4 bg-footer rounded-xl mx-4 md:mx-12 mt-4 shadow-md">
+
+        <!-- Logo -->
+        <img src="public/logo.png" class="h-10 md:h-12" alt="Logo">
+
+        <!-- Navigation desktop -->
+        <nav class="hidden md:flex nav-gap-51 text-white text-lg font-regular">
+            <a href="#" class="hover:text-orange-400 transition-colors duration-300">Home</a>
+            <a href="#" class="hover:text-orange-400 transition-colors duration-300">Planner</a>
+            <a href="#" class="hover:text-orange-400 transition-colors duration-300">Match Making</a>
+            <a href="#" class="hover:text-orange-400 transition-colors duration-300">Focus</a>
+            <a href="#" class="hover:text-orange-400 transition-colors duration-300">Analytics</a>
+            <a href="#" class="hover:text-orange-400 transition-colors duration-300">Forum</a>
+        </nav>
+
+        <!-- Icons -->
+        <div class="flex items-center gap-3 md:gap-4">
+            <button><img src="public/notification.png" class="h-5 md:h-6 opacity-80 hover:opacity-100 transition-opacity duration-300"></button>
+            <button><img src="public/parametres.png" class="h-5 md:h-6 opacity-80 hover:opacity-100 transition-opacity duration-300"></button>
+            <img src="public/user.png" class="h-10 w-10 md:h-12 md:w-14 rounded-full border-2 border-accent" alt="User">
+        </div>
+    </header>
+
+    <!-- WRAPPER -->
+    <div class="px-4 md:px-10 py-10 flex flex-col lg:flex-row gap-10">
+
+        <!-- LEFT SIDE -->
+        <div class="flex-1 space-y-12">
+
+            <!-- EVENT CARDS -->
+            <div>
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-layer-group text-accent"></i>
+                    Your Events
+                </h2>
+
+                <!-- Responsive cards grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+
+                    <!-- CARD 1 -->
+                    <div class="bg-bgCard rounded-2xl shadow-lg overflow-hidden hover:scale-[1.02] transition-all duration-300">
+                        <img src="public/math.jpeg" class="h-36 sm:h-40 w-full object-cover">
+
+                        <div class="p-5 space-y-3">
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs font-medium">
+                                Study
+                            </span>
+
+                            <h3 class="text-lg font-semibold">Math study group</h3>
+                            <p class="text-gray-500 text-sm">Tomorrow, 2:00 PM</p>
+
+                            <a href="detailEvent.html" class="text-accent font-medium hover:underline">
+                                View details →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="bg-bgCard rounded-2xl shadow-lg overflow-hidden hover:scale-[1.02] transition-all duration-300">
+                        <img src="public/groupproject.jpeg" class="h-36 sm:h-40 w-full object-cover">
+
+                        <div class="p-5 space-y-3">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-medium">
+                                Meeting
+                            </span>
+
+                            <h3 class="text-lg font-semibold">Group Project Meeting</h3>
+                            <p class="text-gray-500 text-sm">Tomorrow, 4:00 PM</p>
+
+                            <button class="text-accent font-medium hover:underline">
+                                View details →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="bg-bgCard rounded-2xl shadow-lg overflow-hidden hover:scale-[1.02] transition-all duration-300">
+                        <img src="public/project.jpeg" class="h-36 sm:h-40 w-full object-cover">
+
+                        <div class="p-5 space-y-3">
+                            <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-medium">
+                                Project
+                            </span>
+
+                            <h3 class="text-lg font-semibold">Business project</h3>
+                            <p class="text-gray-500 text-sm">Next week, 4:00 PM</p>
+
+                            <button class="text-accent font-medium hover:underline">
+                                View details →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="button mt-8 px-10 py-3 text-white text-sm font-semibold rounded-[20px] hover:scale-105 transition-all duration-300">
+                    + Add New Event
+                </button>
+
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="w-full lg:w-[350px] space-y-6">
+
+            <!-- CALENDAR -->
+            <div class="bg-bgCard rounded-xl p-6 shadow border border-secondary/20">
+                <h3 class="text-lg font-semibold mb-2">Mon, Aug 17</h3>
+
+                <div class="flex justify-between items-center text-gray-500 text-sm mb-3">
+                    <span>August 2025</span>
+                    <div class="flex gap-2">
+                        <button class="hover:text-accent transition-colors duration-300">&lt;</button>
+                        <button class="hover:text-accent transition-colors duration-300">&gt;</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-7 text-center text-gray-600 text-sm mb-2">
+                    <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                </div>
+
+                <div class="grid grid-cols-7 gap-2 text-center">
+
+                    <span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span>
+
+                    <span class="bg-red-200 text-red-600 font-bold rounded-full w-8 h-8 mx-auto flex items-center justify-center">5</span>
+
+                    <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+
+                    <span>13</span><span>14</span><span>15</span><span>16</span>
+
+                    <span class="bg-accent text-white rounded-full w-8 h-8 mx-auto flex items-center justify-center">17</span>
+
+                    <span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
+
+                    <span class="bg-accent-30 text-accent rounded-full w-8 h-8 mx-auto flex items-center justify-center">24</span>
+
+                    <span>25</span><span>26</span>
+                </div>
+            </div>
+
+            <!-- NOTIFICATIONS - Liens vers reminders.html -->
+            <a href="reminders.html" class="block cursor-pointer">
+                <div class="bg-green-100 border-l-4 border-green-600 p-4 rounded-lg hover:shadow-md transition-all duration-300">
+                    <p class="font-semibold text-green-700">Reminder</p>
+                    <p class="text-sm text-gray-700">Math study group starts in 1 hour</p>
+                </div>
+            </a>
+
+            <a href="reminders.html" class="block cursor-pointer">
+                <div class="bg-red-100 border-l-4 border-red-600 p-4 rounded-lg hover:shadow-md transition-all duration-300">
+                    <p class="font-semibold text-red-700">Conflict detected</p>
+                    <p class="text-sm text-gray-700">Two events at 4:00PM tomorrow</p>
+                </div>
+            </a>
+
+            <!-- Lien direct vers la page reminders -->
+            <a href="reminder.html" class="block w-full">
+                <div class="mt-4 p-4 bg-accent-30 text-accent rounded-xl font-medium text-center hover:bg-accent hover:text-light transition-colors duration-300 border border-accent/30">
+                    View All Notifications →
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="px-6 md:px-10 py-10 bg-footer text-light">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+
+            <!-- Logo + description -->
+            <div>
+                <img src="public/logo1.png" class="h-12 md:h-16 mb-4">
+                <p class="max-w-xs text-gray-300">
+                    Connecting students worldwide to learn and grow together.
+                </p>
+            </div>
+
+            <!-- Quick links -->
+            <div>
+                <h3 class="text-xl font-semibold mb-2">Quick Links</h3>
+                <ul class="space-y-1 text-gray-300">
+                    <li><a href="#" class="hover:text-accent transition-colors duration-300">Home</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors duration-300">About Us</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors duration-300">How It Works</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors duration-300">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div>
+                <h3 class="text-xl font-semibold mb-2">Resources</h3>
+                <ul class="space-y-1 text-gray-300">
+                    <li><a href="#" class="hover:text-accent transition-colors duration-300">Help Center</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors duration-300">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors duration-300">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors duration-300">FAQs</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-xl font-semibold mb-2">Get in Touch</h3>
+                <p class="text-gray-300 mb-3">hello@esprit2peer.com</p>
+
+                <div class="flex gap-4">
+                    <a href="#" class="hover:opacity-80 transition-opacity duration-300">
+                        <img src="public/facebook.png" class="h-6" alt="Facebook">
+                    </a>
+                    <a href="#" class="hover:opacity-80 transition-opacity duration-300">
+                        <img src="public/instagram.png" class="h-6" alt="Instagram">
+                    </a>
+                    <a href="#" class="hover:opacity-80 transition-opacity duration-300">
+                        <img src="public/twitter.png" class="h-6" alt="Twitter">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="text-center text-gray-400 mt-10">
+            © 2025 Esprit2Peer. All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
