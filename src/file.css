@@ -3,10 +3,10 @@
 :root {
   --color-primary: #fdfbee;
   --color-secondary: #57B4BA;
-    --color-textblue: #32B4AE;
+  --color-textblue: #32B4AE;
   --color-accent: #FE4F2D;
   --color-accent-30: rgb(254, 79, 45, 0.3);
-   --color-card:#F7F4E8;
+  --color-card:#F7F4E8;
   --color-darkgreen: #015551;
   --color-light: #FFFFFF;
   --footer-bg: #004A4A;
@@ -17,11 +17,19 @@
   --color-button1-start: rgba(254, 79, 45, 0.56); /* #FE4F2D à 56% */
   --color-button1-end: rgba(255, 54, 14, 1);      /* #FF360E à 100% */
   --color-p-start: #32B4AE;
-   --color-p-end: #FE4F2D; 
-   --color-b-satart:#57B4BA;
-   --color-b-end:#10B981;
-   --color-backgroundSession: rgb(254, 79, 45, 0.61);
-     --color-backgroundSession1:rgb(0, 74, 74, 0.15);
+  --color-p-end: #FE4F2D; 
+  --color-b-satart:#57B4BA;
+  --color-b-end:#10B981;
+  --color-backgroundSession: rgb(254, 79, 45, 0.61);
+  --color-backgroundSession1:rgb(0, 74, 74, 0.15);
+
+  /* Private session spécifiques */
+  --color-progress-bar: #fecaca;
+  --color-session-progress-start: #ff6b6b;
+  --color-session-progress-end: #fec89a;
+  --color-task-complete: #22c55e;
+  --color-task-pending: #eab308;
+  --color-card-strong: #ffffff;
 
 
 
@@ -52,6 +60,17 @@
 .bg-bgCard{ background-color: var(--color-card); }
 .bg-session { background-color: var(--color-backgroundSession); }
 .bg-session1 { background-color: var( --color-backgroundSession1); }
+.bg-progress { background-color: var(--color-progress-bar); }
+.bg-card-strong { background-color: var(--color-card-strong); }
+.session-progress {
+  background: linear-gradient(
+    to right,
+    var(--color-session-progress-start),
+    var(--color-session-progress-end)
+  );
+}
+.text-task-complete { color: var(--color-task-complete); }
+.text-task-pending { color: var(--color-task-pending); }
 
 
 .button {
