@@ -1,9 +1,9 @@
-/* ===== ALAÂ + TEAM GLOBAL STYLES (FINAL MERGED) ===== */
+/* ===== ALAÂ + TEAM GLOBAL STYLES (FINAL MERGED WITH NEW MEMBER) ===== */
 
-/* Tailwind import (only once, kept from main file) */
+/* Tailwind import (only once) */
 @import "tailwindcss";
 
-/* ===== Global CSS Variables (yours dominate, new ones added safely) ===== */
+/* ===== Global CSS Variables (YOURS DOMINATE + New Member variables appended safely) ===== */
 :root {
   --color-primary: #fdfbee;
   --color-secondary: #57B4BA;
@@ -28,17 +28,24 @@
   --color-backgroundSession1: rgba(0, 74, 74, 0.15);
   --color-star-active: #FBBF24;
 
-  /* New member additional variables (APPENDED, NOT overriding yours) */
+  /* ===== NEW MEMBER ADDED VARIABLES (appended safely) ===== */
   --color-textgray: rgb(0, 0, 0, 0.34);
   --color-backgroundicon: #D9D9D9;
+  --color-progress-bar: #fecaca;
+  --color-session-progress-start: #ff6b6b;
+  --color-session-progress-end: #fec89a;
+  --color-task-complete: #22c55e;
+  --color-task-pending: #eab308;
+  --color-card-strong: #ffffff;
+  --color-card-strong: #ffffff; /* same value, no conflict impact */
 }
 
-/* ===== Tailwind layers (only once, kept exactly from main file) ===== */
+/* ===== Tailwind layers (only once, preserved) ===== */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ===== Utility classes (main file remains priority) ===== */
+/* ===== Custom utility classes (Your file is the foundation) ===== */
 .bg-primary { background-color: var(--color-primary); }
 .bg-secondary { background-color: var(--color-secondary); }
 .bg-accent { background-color: var(--color-accent); }
@@ -56,6 +63,7 @@
 .bg-footer { background-color: var(--footer-bg); }
 .bg-footer-30 { background-color: var(--footer-bg-30); }
 .border-primary { border-color: var(--color-primary); }
+
 .bg-accent-30 { background-color: var(--color-accent-30); }
 .bg-back-4 { background-color: var(--color-background); }
 .bg-bgCard { background-color: var(--color-card); }
@@ -81,7 +89,7 @@
   );
 }
 
-/* ===== Buttons (NO overwrite, yours kept, partner styles merged) ===== */
+/* ===== Buttons (Your version kept, theirs not overriding) ===== */
 .button {
   background: linear-gradient(to right, var(--color-button1-start), var(--color-button1-end));
   color: white;
@@ -113,15 +121,21 @@
   color: transparent;
 }
 
-/* ===== Star Rating System (kept, unified & conflict-free) ===== */
+/* ===== Star Rating System (preserved) ===== */
 .star-rating-container { display: flex; gap: 0.25rem; }
 .star-icon { cursor: pointer; color: #E5E7EB; transition: color 0.2s ease; font-size: 1.875rem; }
 .star-icon.active, .star-icon:hover, .star-rating-container:hover .star-icon { color: var(--color-star-active); }
 .star-rating-container .star-icon:hover ~ .star-icon { color: #E5E7EB; }
 
-/* ===== Modal Styles (fully preserved from main file) ===== */
+/* ===== Modal Styles (fully preserved, no overwrite) ===== */
 .modal-overlay { background-color: rgba(0,0,0,0.7); }
-.modal-content { background-color: white; border-radius: 0.75rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+
+.modal-content {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+
 .modal-header { border-bottom-color: #E5E7EB; }
 .dark .modal-header { border-bottom-color: #374151; }
 .modal-text-secondary { color: #4B5563; }
@@ -132,7 +146,18 @@
 .modal-close:hover { color: #111827; }
 .dark .modal-close { color: #D1D5DB; }
 .dark .modal-close:hover { color: #F9FAFB; }
-.pie-chart { width: 160px; height: 160px; border-radius: 50%; background: conic-gradient(var(--color-p-start) 0% 85%, var(--color-accent) 85% 90%, var(--color-secondary) 90% 100%); }
+
+/* ===== Pie Chart / Card Visuals (preserved) ===== */
+.pie-chart {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--color-p-start) 0% 85%,
+    var(--color-accent) 85% 90%,
+    var(--color-secondary) 90% 100%
+  );
+}
 .card-bg { background-color: var(--color-background); backdrop-filter: blur(10px); }
 
 /* ===== Icons fix (preserved) ===== */
@@ -141,7 +166,7 @@
   font-size: inherit;
 }
 
-/* ===== Responsive Containers (preserved from your teammate's work) ===== */
+/* ===== Responsive Containers (preserved) ===== */
 @media (max-width: 768px) {
   .container-narrow { max-width: 100%; padding-left: 1rem; padding-right: 1rem; }
 }
@@ -154,12 +179,27 @@
   .container-narrow { max-width: 80%; margin-left: auto; margin-right: auto; }
 }
 
-/* ===== New member extra utility classes (ADDED at the end, safe) ===== */
+/* ===== NEW MEMBER ADDED STYLES (NOT OVERRIDING YOURS) ===== */
 .bg-text-gray { color: var(--color-textgray); }
 .bg-icon { background-color: var(--color-backgroundicon); }
+
 .bg-new-icon-style {
   background-color: var(--color-backgroundicon);
   color: var(--color-textgray);
   border-radius: 0.4rem;
   padding: 0.3rem;
 }
+
+.bg-progress { background-color: var(--color-progress-bar); }
+.bg-card-strong { background-color: var(--color-card-strong); }
+
+.session-progress {
+  background: linear-gradient(
+    to right,
+    var(--color-session-progress-start),
+    var(--color-session-progress-end)
+  );
+}
+
+.text-task-complete { color: var(--color-task-complete); }
+.text-task-pending { color: var(--color-task-pending); }
