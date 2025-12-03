@@ -1,9 +1,9 @@
-/* ===== ALAÂ + TEAM GLOBAL STYLES (MERGED) ===== */
+/* ===== ALAÂ + TEAM GLOBAL STYLES (FINAL MERGED) ===== */
 
-/* Tailwind import (only once) */
+/* Tailwind import (only once, kept from main file) */
 @import "tailwindcss";
 
-/* ===== Global CSS Variables (merged, duplicates removed) ===== */
+/* ===== Global CSS Variables (yours dominate, new ones added safely) ===== */
 :root {
   --color-primary: #fdfbee;
   --color-secondary: #57B4BA;
@@ -27,14 +27,18 @@
   --color-backgroundSession: rgba(254, 79, 45, 0.61);
   --color-backgroundSession1: rgba(0, 74, 74, 0.15);
   --color-star-active: #FBBF24;
+
+  /* New member additional variables (APPENDED, NOT overriding yours) */
+  --color-textgray: rgb(0, 0, 0, 0.34);
+  --color-backgroundicon: #D9D9D9;
 }
 
-/* ===== Tailwind layers (kept exactly as written, only once) ===== */
+/* ===== Tailwind layers (only once, kept exactly from main file) ===== */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ===== Custom utility classes from both files ===== */
+/* ===== Utility classes (main file remains priority) ===== */
 .bg-primary { background-color: var(--color-primary); }
 .bg-secondary { background-color: var(--color-secondary); }
 .bg-accent { background-color: var(--color-accent); }
@@ -77,9 +81,7 @@
   );
 }
 
-/* ===== Buttons (merged but NOT overwritten) ===== */
-
-/* Your version */
+/* ===== Buttons (NO overwrite, yours kept, partner styles merged) ===== */
 .button {
   background: linear-gradient(to right, var(--color-button1-start), var(--color-button1-end));
   color: white;
@@ -89,7 +91,6 @@
   cursor: pointer;
 }
 
-/* Your partner's extended button2 version (kept as primary) */
 .button2 {
   background: linear-gradient(to right, var(--color-b-satart), var(--color-b-end));
   color: white;
@@ -101,11 +102,9 @@
   transition: opacity 0.3s ease;
 }
 
-.button2:hover {
-  opacity: 0.9;
-}
+.button2:hover { opacity: 0.9; }
 
-/* ===== Gradient text class ===== */
+/* ===== Gradient text class (kept from your file) ===== */
 .p {
   background: linear-gradient(to right, var(--color-p-start), var(--color-p-end));
   -webkit-background-clip: text;
@@ -114,109 +113,53 @@
   color: transparent;
 }
 
-/* ===== Star Rating System (from both, combined safely) ===== */
-.star-rating-container {
-  display: flex;
-  gap: 0.25rem;
-}
+/* ===== Star Rating System (kept, unified & conflict-free) ===== */
+.star-rating-container { display: flex; gap: 0.25rem; }
+.star-icon { cursor: pointer; color: #E5E7EB; transition: color 0.2s ease; font-size: 1.875rem; }
+.star-icon.active, .star-icon:hover, .star-rating-container:hover .star-icon { color: var(--color-star-active); }
+.star-rating-container .star-icon:hover ~ .star-icon { color: #E5E7EB; }
 
-.star-icon {
-  cursor: pointer;
-  color: #E5E7EB;
-  transition: color 0.2s ease;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.star-icon.active,
-.star-icon:hover,
-.star-rating-container:hover .star-icon {
-  color: var(--color-star-active);
-}
-
-.star-rating-container .star-icon:hover ~ .star-icon {
-  color: #E5E7EB;
-}
-
-/* ===== Modal Styles (kept fully, duplicates merged) ===== */
+/* ===== Modal Styles (fully preserved from main file) ===== */
 .modal-overlay { background-color: rgba(0,0,0,0.7); }
-
-.modal-content {
-  background-color: white;
-  border-radius: 0.75rem;
-  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
-}
-
+.modal-content { background-color: white; border-radius: 0.75rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
 .modal-header { border-bottom-color: #E5E7EB; }
-
 .dark .modal-header { border-bottom-color: #374151; }
-
 .modal-text-secondary { color: #4B5563; }
-
 .dark .modal-text-secondary { color: #D1D5DB; }
-
-.modal-textarea {
-  border-color: #E5E7EB;
-  background-color: white;
-}
-
-.dark .modal-textarea {
-  border-color: #374151;
-  background-color: #1F2937;
-}
-
+.modal-textarea { border-color: #E5E7EB; background-color: white; }
+.dark .modal-textarea { border-color: #374151; background-color: #1F2937; }
 .modal-close { color: #4B5563; }
-
 .modal-close:hover { color: #111827; }
-
 .dark .modal-close { color: #D1D5DB; }
-
 .dark .modal-close:hover { color: #F9FAFB; }
+.pie-chart { width: 160px; height: 160px; border-radius: 50%; background: conic-gradient(var(--color-p-start) 0% 85%, var(--color-accent) 85% 90%, var(--color-secondary) 90% 100%); }
+.card-bg { background-color: var(--color-background); backdrop-filter: blur(10px); }
 
-/* ===== Pie Chart / Card Visuals (from partner file) ===== */
-.pie-chart {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: conic-gradient(
-    var(--color-p-start) 0% 85%,
-    var(--color-accent) 85% 90%,
-    var(--color-secondary) 90% 100%
-  );
-}
-
-.card-bg {
-  background-color: var(--color-background);
-  backdrop-filter: blur(10px);
-}
-
-/* ===== Icons fix (partner file) ===== */
+/* ===== Icons fix (preserved) ===== */
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   font-size: inherit;
 }
 
-/* ===== Responsive Containers (partner styles kept) ===== */
+/* ===== Responsive Containers (preserved from your teammate's work) ===== */
 @media (max-width: 768px) {
-  .container-narrow {
-    max-width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+  .container-narrow { max-width: 100%; padding-left: 1rem; padding-right: 1rem; }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .container-narrow {
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  .container-narrow { max-width: 90%; margin-left: auto; margin-right: auto; }
 }
 
 @media (min-width: 1024px) {
-  .container-narrow {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  .container-narrow { max-width: 80%; margin-left: auto; margin-right: auto; }
+}
+
+/* ===== New member extra utility classes (ADDED at the end, safe) ===== */
+.bg-text-gray { color: var(--color-textgray); }
+.bg-icon { background-color: var(--color-backgroundicon); }
+.bg-new-icon-style {
+  background-color: var(--color-backgroundicon);
+  color: var(--color-textgray);
+  border-radius: 0.4rem;
+  padding: 0.3rem;
 }
